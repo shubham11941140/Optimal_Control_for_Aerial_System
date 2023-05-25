@@ -124,9 +124,7 @@ $$\mu_j \times g_j(x) = 0 \quad j = 1,2,...,m$$
 
 ### **Sufficient Conditions:**
 
-$$ \exists \lambda^* = [\lambda_1^*, \lambda_2^*, ..., \lambda_p^*] \quad \exists \mu^* = [\mu_1^*, \mu_2^*, ..., \mu_m^*] $$
-
-$$ \triangledown_x^{2} f(x^*) + \sum_{i=1}^{p}\lambda_i^* \triangledown_x^{2} h_i(x^*) + \sum_{j=1}^{m}\mu_j^* \triangledown_x^{2} g_j(x^*) \geq 0$$
+![image](https://github.com/shubham11941140/Optimal_Control_for_Aerial_System/assets/63910248/b51f3790-5eb4-40af-8973-71970f79ec22)
 
 
 ### **Example 1:**
@@ -307,6 +305,9 @@ Checking for local minima/maxima.
 **To check this, we will use the following condition:**
 
 $$\triangledown^{2}f(x) + \mu_1 \triangledown^{2}g_{1}(x) + \mu_2 \triangledown^{2}g_{2}(x) \geq 0$$
+
+![image](https://github.com/shubham11941140/Optimal_Control_for_Aerial_System/assets/63910248/68baa43d-06ad-4f77-bc48-89287d1bfa97)
+
 
 #### **The solution is a local minimum.**
 
