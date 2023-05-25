@@ -9,7 +9,11 @@ Implement Steepest Descent Method and Conjugate Gradient Method for finding the 
 
 **Steps for Steepest Descent Algorithm:**
 
-1. Choose Starting Point $x$ = $ \begin{bmatrix} x_{1} \\ x_{2} \end{bmatrix} $ and evalute the function at $x = \begin{bmatrix} x_{1} \\ x_{2} \end{bmatrix} $. Also define the stopping criterias $\delta_1, \delta_2$ and $\delta_3$.
+1. Choose Starting Point $x$ and evalute the function at 
+
+![image](https://github.com/shubham11941140/Optimal_Control_for_Aerial_System/assets/63910248/3329a6d7-a8b2-4886-9957-f595ff375af0)
+
+Also define the stopping criterias $\delta_1, \delta_2$ and $\delta_3$.
 
 2. Find $f(x^{(k)})$ and $\nabla f(x^{(k)})$
 
@@ -39,14 +43,11 @@ $\beta_{k} = \dfrac{\nabla f(x^{(k)})^{T}\nabla f(x^{(k)})}{\nabla f(x^{(k-1)})^
 
 $f(x) = f(x_1, x_2) = 2x_1^2 + 4x_1x_2 + 4x_2^2 + 2x_2 - 4x_1 + 16$
 
-$\nabla f(x) = \nabla f(x_1, x_2) = \begin{bmatrix} 4x_1 + 4x_2 - 4 \\ 4x_1 + 8x_2 + 2 \end{bmatrix}$
-
-$\nabla f(x)^T = \nabla f(x_1, x_2)^T = \begin{bmatrix} 4x_1 + 4x_2 - 4 & 4x_1 + 8x_2 + 2 \end{bmatrix}$
-
-$\nabla f(x)^2 = \nabla^{2} f(x_1, x_2) = \begin{bmatrix} 4 & 4 \\ 4 & 8 \end{bmatrix}$
+![image](https://github.com/shubham11941140/Optimal_Control_for_Aerial_System/assets/63910248/ad91c629-95a6-4d4d-a2d8-03dd9ff270a1)
 
 **Plotting the Contour Plot of the Function**
 
+![image](https://github.com/shubham11941140/Optimal_Control_for_Aerial_System/assets/63910248/f9f741fa-2c04-40a8-b8bf-9258f8329117)
 
 
 **Print the values of x and min(f(x)) using Steepest Descent Method**
@@ -62,3 +63,8 @@ The minimum value is:  9.50000000217671
 The minimum point is:  [2.50001475369140 -1.49998524630860]
 The minimum value is:  9.50000000217671
 ```
+
+**Plotting the Contour Plot of the Function with the Minima Point**
+
+![image](https://github.com/shubham11941140/Optimal_Control_for_Aerial_System/assets/63910248/c2129048-9ff0-4303-ae14-7676949678c1)
+
