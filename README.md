@@ -374,12 +374,18 @@ $$x^*(t) = t^3 + 2.687t$$
 
 ### **Hessian Matrix** $H$ is given by
 
+![image](https://github.com/shubham11941140/Optimal_Control_for_Aerial_System/assets/63910248/b9061b27-d47b-4827-a23b-619c3353c943)
 
 
 ### **Second Variation**
 
+![image](https://github.com/shubham11941140/Optimal_Control_for_Aerial_System/assets/63910248/9d21b6dd-ed33-424c-acc0-29eb1b8d8530)
+
 
 ### **Compute Hessian Matrix**
+
+![image](https://github.com/shubham11941140/Optimal_Control_for_Aerial_System/assets/63910248/0d321390-654b-4a3b-8402-36ee86631822)
+
 
 This means our solution is a minimum if the **Hessian Matrix is positive definite.**
 
@@ -387,6 +393,7 @@ This means our solution is a minimum if the **Hessian Matrix is positive definit
 
 ### **Compute Second Variation**
 
+![image](https://github.com/shubham11941140/Optimal_Control_for_Aerial_System/assets/63910248/710c7037-1ad3-4770-b29c-7dac1849ea66)
 
 
 at Optimal Trajectory $x^*(t)$,
