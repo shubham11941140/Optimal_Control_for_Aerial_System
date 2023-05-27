@@ -412,6 +412,10 @@ $$t_f = 1.55$$
 
 $$\delta^2 J = 89.373$$
 
+#### **Plotting the Optimal Trajectory 1**
+
+$$t = 0:0.01:1.55$$
+
 ### **Optimal Trajectory 2:**
 
 $$x^*(t) = t^3 + 2.687t$$
@@ -421,5 +425,9 @@ $$t_0 = 0$$
 $$t_f = 0.64$$
 
 $$\delta^2 J = 6.291456$$
+
+#### **Plotting the Optimal Trajectory 2**
+
+$$t = 0:0.01:0.64$$
 
 
