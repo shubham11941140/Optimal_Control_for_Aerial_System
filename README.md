@@ -513,7 +513,7 @@ $$P_{12}(6) = 1$$
 
 $$P_{22}(6) = 2$$
 
-Let the time-step be 
+Let the time-step be
 
 $$\Delta t = 0.001$$
 
@@ -571,7 +571,7 @@ $$P_{22}(6) = 2$$
 
 Solving the above equations using Euler's Method:
 
-Let the time-step be 
+Let the time-step be
 
 $$\Delta t = 0.001$$
 
@@ -604,4 +604,8 @@ $P_{22}(t)$ vs $t$
 
 ![image](https://github.com/shubham11941140/Optimal_Control_for_Aerial_System/assets/63910248/975872b1-ed0d-4961-8455-8f01f914eecc)
 
+
+## Part 5: Solve the Matrix Differential Riccati Equation (MDRE) for an Infinite Linear Quadratic Regulator (LQR)
+
+### **Problem Statement:**
 
