@@ -416,6 +416,9 @@ $$\delta^2 J = 89.373$$
 
 $$t = 0:0.01:1.55$$
 
+![image](https://github.com/shubham11941140/Optimal_Control_for_Aerial_System/assets/63910248/464ed2d2-2560-46b2-bb63-c6406822ca61)
+
+
 ### **Optimal Trajectory 2:**
 
 $$x^*(t) = t^3 + 2.687t$$
@@ -429,5 +432,8 @@ $$\delta^2 J = 6.291456$$
 #### **Plotting the Optimal Trajectory 2**
 
 $$t = 0:0.01:0.64$$
+
+![image](https://github.com/shubham11941140/Optimal_Control_for_Aerial_System/assets/63910248/f250d7e2-99b1-46b2-9864-986bdca47667)
+
 
 
