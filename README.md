@@ -461,7 +461,147 @@ $$+ \int_0^6 \left[ 2x_{1}^2(t) + 3x_1(t)x_2(t) + 2x_2^2(t) + \dfrac{1}{2} u^2(t
 
 **Find the optimal control input $u(t)$ for the given system to minimize the performance index.**
 
+**Solution**:
+
+![image](https://github.com/shubham11941140/Optimal_Control_for_Aerial_System/assets/63910248/cc9730e7-2f08-42b3-bb34-ebd910664637)
+
+### **Eigen-Vales of $A$ are:**
+
+$$\lambda_1 = 1 + j$$
+
+$$\lambda_2 = 1 - j$$
+
+**Since the Real-Part of both the Eigen-Values is positive, the system is unstable.**
+
+### **Matrix Differential Riccati Equation:**
+
+$$\dot{P} = -(A^TP + PA - PBR^{-1}B^TP + Q)$$
+
+![image](https://github.com/shubham11941140/Optimal_Control_for_Aerial_System/assets/63910248/6c85f65e-6082-42a5-bf03-b935e76eebd6)
+
+**Simplifying**
+
+![image](https://github.com/shubham11941140/Optimal_Control_for_Aerial_System/assets/63910248/58620187-0f77-4e21-b421-313a0e62d1c6)
+
+$$\dot{P_{11}}(t) = 4P_{12}^2(t) + 4P_{12}(t) - 4$$
+
+$$\dot{P_{12}}(t) = -P_{11}(t) + 4P_{12}(t)P_{22}(t) - 2P_{12}(t) + 2P_{22}(t) - 3$$
+
+$$\dot{P_{22}}(t) = -2P_{12}^2(t) + 4P_{22}^2(t) - 4P_{22}(t) - 4$$
+
+$$P_{11}(6) = 1$$
+
+$$P_{12}(6) = 1$$
+
+$$P_{22}(6) = 2$$
+
+Solving above equations using **Runge-Kutta Method** and **Euler's Method** with a small time-step.
+
+### **Runge-Kutta Method**:
+
+Solving the above equations using Runge-Kutta Method:
+
+$$\dot{P_{11}}(t) = 4P_{12}^2(t) + 4P_{12}(t) - 4$$
+
+$$\dot{P_{12}}(t) = -P_{11}(t) + 4P_{12}(t)P_{22}(t) - 2P_{12}(t) + 2P_{22}(t) - 3$$
+
+$$\dot{P_{22}}(t) = -2P_{12}^2(t) + 4P_{22}^2(t) - 4P_{22}(t) - 4$$
+
+$$P_{11}(6) = 1$$
+
+$$P_{12}(6) = 1$$
+
+$$P_{22}(6) = 2$$
+
+Let the time-step be 
+
+$$\Delta t = 0.001$$
+
+**Converting to vector form:**
+
+![image](https://github.com/shubham11941140/Optimal_Control_for_Aerial_System/assets/63910248/ebb1e990-9ea4-4d8b-91be-7b194b6ad336)
 
 
+
+**Therefore,**
+
+
+![image](https://github.com/shubham11941140/Optimal_Control_for_Aerial_System/assets/63910248/7d413a2b-065a-4fd5-a423-8c33ded0f730)
+
+Clearly, we have values for $\vec{X}$ from $t \in [0, 6]$ at a time-step of $\Delta t = 0.001$.
+
+Now, let us plot $P_{11}(t)$, $P_{12}(t)$ and $P_{22}(t)$ vs $t$
+
+($P_{11}(t)$, $P_{12}(t)$ and $P_{22}(t)$ are the values of $\vec{X}$ at each time-step)
+
+**Plotting**:
+
+$P_{11}(t)$ vs $t$:
+
+![image](https://github.com/shubham11941140/Optimal_Control_for_Aerial_System/assets/63910248/be4ce487-d88f-494c-938a-57beb26cf06d)
+
+
+$P_{12}(t)$ vs $t$
+
+![image](https://github.com/shubham11941140/Optimal_Control_for_Aerial_System/assets/63910248/41c5f3db-c813-45e0-aecb-70ec81743792)
+
+
+
+$P_{22}(t)$ vs $t$
+
+![image](https://github.com/shubham11941140/Optimal_Control_for_Aerial_System/assets/63910248/b17ea8b6-0730-4e1d-9ab4-69955d38f93b)
+
+### **Plotting them together:**
+
+![image](https://github.com/shubham11941140/Optimal_Control_for_Aerial_System/assets/63910248/975872b1-ed0d-4961-8455-8f01f914eecc)
+
+### **Euler's Method**:
+
+$$\dot{P_{11}}(t) = 4P_{12}^2(t) + 4P_{12}(t) - 4$$
+
+$$\dot{P_{12}}(t) = -P_{11}(t) + 4P_{12}(t)P_{22}(t) - 2P_{12}(t) + 2P_{22}(t) - 3$$
+
+$$\dot{P_{22}}(t) = -2P_{12}^2(t) + 4P_{22}^2(t) - 4P_{22}(t) - 4$$
+
+$$P_{11}(6) = 1$$
+
+$$P_{12}(6) = 1$$
+
+$$P_{22}(6) = 2$$
+
+Solving the above equations using Euler's Method:
+
+Let the time-step be 
+
+$$\Delta t = 0.001$$
+
+![image](https://github.com/shubham11941140/Optimal_Control_for_Aerial_System/assets/63910248/01083969-87e7-4e19-a0cd-c33508bdb10e)
+
+Clearly, we have values for $\vec{X}$ from $t \in [0, 6]$ at a time-step of $\Delta t = 0.001$.
+
+Now, let us plot $P_{11}(t)$, $P_{12}(t)$ and $P_{22}(t)$ vs $t$
+
+($P_{11}(t)$, $P_{12}(t)$ and $P_{22}(t)$ are the values of $\vec{X}$ at each time-step)
+
+**Plotting**:
+
+$P_{11}(t)$ vs $t$:
+
+![image](https://github.com/shubham11941140/Optimal_Control_for_Aerial_System/assets/63910248/be4ce487-d88f-494c-938a-57beb26cf06d)
+
+
+$P_{12}(t)$ vs $t$
+
+![image](https://github.com/shubham11941140/Optimal_Control_for_Aerial_System/assets/63910248/41c5f3db-c813-45e0-aecb-70ec81743792)
+
+
+
+$P_{22}(t)$ vs $t$
+
+![image](https://github.com/shubham11941140/Optimal_Control_for_Aerial_System/assets/63910248/b17ea8b6-0730-4e1d-9ab4-69955d38f93b)
+
+### **Plotting them together:**
+
+![image](https://github.com/shubham11941140/Optimal_Control_for_Aerial_System/assets/63910248/975872b1-ed0d-4961-8455-8f01f914eecc)
 
 
