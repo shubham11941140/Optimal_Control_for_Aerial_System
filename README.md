@@ -435,5 +435,33 @@ $$t = 0:0.01:0.64$$
 
 ![image](https://github.com/shubham11941140/Optimal_Control_for_Aerial_System/assets/63910248/f250d7e2-99b1-46b2-9864-986bdca47667)
 
+## Part 4: Solve the Matrix Differential Riccati Equation (MDRE) for a Finite Linear Quadratic Regulator (LQR)
+
+### **Problem Statement:**
+
+**State-Space Definition of the given System:**
+
+$$\dot{x_1}(t) = x_2(t)$$
+
+$$\dot{x_2}(t) = -2x_1(t) + 2x_2(t) + 2u(t)$$
+
+**Boundary Conditions:**
+
+$$t \in [0,6]$$
+
+$$x_1(0) = 1$$
+
+$$x_2(0) = -2$$
+
+**Performance Index:**
+
+$$PI = \dfrac{1}{2} \left[ x_{1}^2(6) + 2x_1(6)x_2(6) + 2x_2^2(6) \right] $$
+
+$$+ \int_0^6 \left[ 2x_{1}^2(t) + 3x_1(t)x_2(t) + 2x_2^2(t) + \dfrac{1}{2} u^2(t) \right]dt$$
+
+**Find the optimal control input $u(t)$ for the given system to minimize the performance index.**
+
+
+
 
 
