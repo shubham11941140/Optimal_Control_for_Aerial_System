@@ -609,3 +609,104 @@ $P_{22}(t)$ vs $t$
 
 ### **Problem Statement:**
 
+**State-Space Definition of the given System:**
+
+$$\dot{x_1}(t) = x_2(t)$$
+
+$$\dot{x_2}(t) = -2x_1(t) + 2x_2(t) + 2u(t)$$
+
+**Boundary Conditions:** 
+
+$$t \in [0,6]$$
+
+$$x_1(0) = 1$$
+
+$$x_2(0) = -2$$
+
+**Performance Index:**
+
+$$PI = \dfrac{1}{2} \left[ x_{1}^2(6) + 2x_1(6)x_2(6) + 2x_2^2(6) \right] + \int_0^6 \left[ 2x_{1}^2(t) + 3x_1(t)x_2(t) + 2x_2^2(t) + \dfrac{1}{2} u^2(t) \right]dt$$
+
+**Find the optimal control input $u(t)$ for the given system to minimize the performance index.**
+
+**Solution**:
+
+![image](https://github.com/shubham11941140/Optimal_Control_for_Aerial_System/assets/63910248/db3170a2-58bd-4f3c-b22e-9e550b38c1e0)
+
+### **Eigen-Vales of $A$ are:**
+
+$$\lambda_1 = 1 + j$$
+
+$$\lambda_2 = 1 - j$$
+
+**Since the Real-Part of both the Eigen-Values is positive, the system is unstable.**
+
+### **Matrix Differential Riccati Equation:**
+
+$$\dot{P} = -(A^TP + PA - PBR^{-1}B^TP + Q)$$
+
+### **Non-Linear Algebraic Riccati Equation:**
+
+$$ \dot{P} = 0$$
+
+**P is a Constant Matrix**
+
+$$A^TP + PA - PBR^{-1}B^TP + Q = 0$$
+
+![image](https://github.com/shubham11941140/Optimal_Control_for_Aerial_System/assets/63910248/0db93963-a9b0-48de-8c36-f85993613ce2)
+
+We have **4 distinct solutions for P**, they are
+
+![image](https://github.com/shubham11941140/Optimal_Control_for_Aerial_System/assets/63910248/a8cbdcd2-8cba-4d80-a6fc-7fb9b5733bf2)
+
+**Calculating**
+
+$$K = -R^{-1}B^TP$$
+
+$$u(t) = -Kx(t)$$
+
+**For $P_1$:**
+
+![image](https://github.com/shubham11941140/Optimal_Control_for_Aerial_System/assets/63910248/1e3e2f3a-286d-4a3d-8c7a-768c942b5e99)
+
+
+**For $P_2$:**
+
+![image](https://github.com/shubham11941140/Optimal_Control_for_Aerial_System/assets/63910248/ed672a3e-9449-42c0-a82d-79998eeef28c)
+
+
+**For $P_3$:**
+
+![image](https://github.com/shubham11941140/Optimal_Control_for_Aerial_System/assets/63910248/39b7ab69-a352-4dc7-ab9b-c4e8413f84d2)
+
+
+**For $P_4$:**
+
+![image](https://github.com/shubham11941140/Optimal_Control_for_Aerial_System/assets/63910248/481a26ad-e730-49f4-b197-b2f79dc06a92)
+
+## **Optimal Cost**
+
+$$C = \dfrac{1}{2} x^T(t_0)Px(t_0)$$
+
+$$t_0 = 0$$
+
+![image](https://github.com/shubham11941140/Optimal_Control_for_Aerial_System/assets/63910248/b96d85f8-cd3c-45ec-a72b-abd3df8598e8)
+
+**For $P_1$:**
+
+$$C_1 = -\sqrt{4 - \sqrt{5}} + 1 + \dfrac{\sqrt{20 - 5\sqrt{5}}}{2} + \sqrt{5} = 3.39283258009334$$
+
+**For $P_2$:**
+
+$$C_2 = -\sqrt{5} + 1 + \sqrt{\sqrt{5} + 4} + \dfrac{\sqrt{20 + 5\sqrt{5}}}{2} = 4.05311200236228$$
+
+**For $P_3$:**
+
+$$C_3 = -\dfrac{\sqrt{20 - 5\sqrt{5}}}{2} + 1 + \sqrt{4 - \sqrt{5}} + \sqrt{5} = 3.07930337490624 $$
+
+**For $P_4$:**
+
+$$C_4 = -\dfrac{\sqrt{20 + 5\sqrt{5}}}{2} - \sqrt{4 + \sqrt{5}} - \sqrt{5} + 1 = −6.52524795736186$$
+
+#### **Since $C_4 = -6.52524795736186$ is the minimum cost, we can say that $P_4$ is the optimal solution.**
+
