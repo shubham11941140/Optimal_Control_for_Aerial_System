@@ -342,6 +342,77 @@ Since, we have gotten only one feasible situation, and that **solution is a loca
 
 Hence, the **true minimum value of this function is $-8.5$ at $x_{1}, x_{2} = (\dfrac{1}{2}, \dfrac{3}{2})$**
 
+## Part 3: Finding Extremal Trajectory of Functional
 
+### **Problem Statement:**
+
+### To find the **Extremal Trajectory** for functional
+
+$$J = \int_{0}^{t_f} \{2 \left( \dot{x}(t) \right)^2 + 24 t x(t) \} dt$$
+
+### given the **initial condition** $x(0) = 0$ and the **final condition** $x(t_f) = 2$.
+
+##### Let $x(t) = x$ and $\dot{x}(t) = \dot{x}$, so
+
+$$V(.) = 2 \dot{x}^2 + 24 tx $$
+
+### **Partially Differentiate** with respect to $x$ and $\dot{x}$
+
+$$\frac{\delta V}{\delta x} = 24 t$$
+
+$$\frac{\delta V}{\delta \dot{x}} = 4 \dot{x}$$
+
+### **Solving we get 2 optimized trajectories**
+
+$$x^*(t) = t^3 - 1.117t$$
+
+$$x^*(t) = t^3 + 2.687t$$
+
+### **We need to compute 2 quantities**
+
+#### **Hessian Matrix** $H$ and **Second Variation** $\delta^2 J$
+
+### **Hessian Matrix** $H$ is given by
+
+
+
+### **Second Variation**
+
+
+### **Compute Hessian Matrix**
+
+This means our solution is a minimum if the **Hessian Matrix is positive definite.**
+
+### So, this is a **minima trajectory.**
+
+### **Compute Second Variation**
+
+
+
+at Optimal Trajectory $x^*(t)$,
+
+$$x^*(t) = t^3 - 1.117t$$
+
+$$x^*(t) = t^3 + 2.687t$$
+
+### **Optimal Trajectory 1:**
+
+$$x^*(t) = t^3 - 1.117t$$
+
+$$t_0 = 0$$
+
+$$t_f = 1.55$$
+
+$$\delta^2 J = 89.373$$
+
+### **Optimal Trajectory 2:**
+
+$$x^*(t) = t^3 + 2.687t$$
+
+$$t_0 = 0$$
+
+$$t_f = 0.64$$
+
+$$\delta^2 J = 6.291456$$
 
 
